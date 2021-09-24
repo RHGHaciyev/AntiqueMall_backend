@@ -1,0 +1,26 @@
+﻿@model AntiqueMall.Models.Photo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2><em>Details</em></h2>
+
+<div>
+    <h4><em>Photo</em></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.photos_path)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photos_path)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.photo_id }, new { @class = "btn btn-primary", @style = "width:150px;" })
+    <a href="/Admin/Photos/Index" class="btn btn-primary " ,style="width:150px; display:block;margin-bototm:13px;">Back to List</a>
+</p>

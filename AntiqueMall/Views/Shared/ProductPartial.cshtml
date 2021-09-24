@@ -1,0 +1,69 @@
+﻿@model AntiqueMall.Models.Product
+
+<div class="bord">
+    <div class="reg">
+        <div class="reg_padd">
+            <p>COMPARE PRODUCTS</p>
+            <h5 class="noproduct" >No products added in the compare table.</h5>
+            <div class="visibleBox">
+                <h4>
+                    Remove
+                    <i class="fa fa-times removeV" aria-hidden="true"></i>
+                </h4>
+                <div class="visibleImgBox">
+                    <img src="@Model.Photo.photos_path" alt="">
+                </div>
+                <div class="visPrice">
+                    <h3>@Model.product_name</h3>
+                    <a href="" class="visibleNumber">$@Model.product_price.00</a>
+                    <a class="btn btn-success btn-responsive visBtn addItem" href="#" dataset="@Model.product_id" >ADD TO CART</a>
+                    <p class="visText">
+                       @Model.description
+                    </p>
+                    <p class="visText p">
+                        in stock
+                    </p>
+                    <p class="visText minus">
+                        -
+                    </p>
+                    <p class="visText NA">
+                      @Model.dimensions
+                    </p>
+                    <p class="visText NA">
+                        $@Model.product_price.00
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="visLeft">
+            <div class="lines"></div>
+            <p class="visTextL">
+                DESCRIPTION
+            </p>
+            <div class="lines"></div>
+            <p class="visText pL">
+                AVAILABILITY
+            </p>
+            <div class="lines"></div>
+            <p class="visText minusL">
+                WEIGHT
+            </p>
+            <div class="lines"></div>
+            <p class="visText NAL">
+                DIMENSIONS
+            </p>
+            <div class="lines"></div>
+        </div>
+    </div>
+    <i class="fa fa-times close_r" aria-hidden="true"></i>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".removeV").click(function () {
+            $(".visibleBox").hide();
+            $(".visLeft").hide();
+            $(".noproduct").fadeIn(400);
+        })
+    })
+
+</script>

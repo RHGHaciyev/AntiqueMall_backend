@@ -1,0 +1,38 @@
+﻿@model AntiqueMall.Models.Product
+
+    <td class="product_img">
+        <a href="#">
+            <img src="@Model.Photo.photos_path">
+        </a>
+    </td>
+    <td class="product_name main" data-title="">
+        <a href="#" class="f_name">@Model.product_name</a>
+    </td>
+    <td class="product_price main" data-title="">
+        <span class="woocommerce-Price-currencySymbol">$</span>
+        <span>88.00</span>
+    </td>
+    <td class="product_quantity" data-title="Quantity">
+        <div class="nb-quantity style-1">
+            <div class="num">
+                <input type="number" id="number" value="1" />
+                <button id="plus" data-inline="true">+</button>
+                <button id="minus" data-inline="true">-</button>
+            </div>
+        </div>
+    </td>
+    <td class="product-subtotal main" data-title="">
+        <span class="">
+            <span class="">$</span>176.00
+        </span>
+    </td>
+    <td class="cash" data-title="">
+        <i class="fa fa-trash-o"></i>
+    </td>
+    <tr>
+        <td colspan="6" class="actions">
+            <a class="btn btn-success btn-responsive btn_res" href="#">Update Cart</a>
+            <input type="hidden" id="rein">
+            <input type="hidden">
+        </td>
+    </tr>

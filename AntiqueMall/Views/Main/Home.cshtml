@@ -1,0 +1,798 @@
+﻿
+@using AntiqueMall.Models;
+
+<html>
+<body>
+    <!-- slider -->
+    <section id="slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 paddS">
+                    @foreach (Slider item in ViewBag.slider)
+                    {
+                        <div class="slider_in active" style="background-image:url(@item.photo)">
+                            <div class="text">
+
+                                <ul class="matrix">
+                                    @for (int i = 0; i < @item.title.Length; i++)
+                                    {
+                                        if (item.title[i].ToString() == " ")
+                                        {
+                                            <li>&nbsp;</li>
+                                        }
+                                        else
+                                        {
+                                            <li>@item.title[i]</li>
+                                        }
+                                    }
+                                </ul>
+                                <p>@item.text</p>
+                                <a class="btn btn-success btn-responsive btn_res" href="Shop.html" target="Blank">
+                                    SHOP NOW
+                                    <i class="fa fa-angle-double-right " aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+        <div class="icon">
+            <i class="fa fa-angle-left left_icon"></i>
+            <i class="fa fa-angle-right right_icon"></i>
+        </div>
+    </section>
+    <section id="f_sale_page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 padd">
+                    <div class="sale_p">
+                        @foreach (BotText item in ViewBag.bottext)
+                        {
+                            <p>
+                                @item.text
+                                @*Add ActionLink here*@
+                                <a href="@item.link" target="Blank">
+                                    sellnow
+                                    <i class="fa fa-angle-double-right right" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery -->
+    <section id=gallery>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text">
+                        <h3>Gallery Collection</h3>
+                        <img src="~/Public/images/icon_bettwen.png" alt="">
+                        <h1>hot antique products</h1>
+                    </div>
+                    <div class="products_list">
+                        <ul>
+                            @foreach (Product_tags item in ViewBag.productTags)
+                            {
+                                <li class="@item.className" id="@item.idName">
+                                    @item.tag_name
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row_all">
+                <!-- all products -->
+                @foreach (Product item in ViewBag.allproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddg all">
+                        <a href="http://localhost:51618/Main/Categories">
+                            <div class="antic">
+                                <a href="#">
+                                    <img src="@item.Photo.photos_path" alt="">
+                                </a>
+                                <div class="text">
+                                    <h4>
+                                        <a>@item.product_name</a>
+                                    </h4>
+                                    <p>$@item.product_price.00</p>
+                                </div>
+
+                                <div class="box" dataset="@item.product_id">
+                                    <ul>
+                                        <li dataset="@item.product_id" class="fQuickview">
+                                            <a href="#">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                        </li>
+                                        <li dataset="@item.product_id" class="fCompare">
+                                            <a href="#">
+                                                <i class="fa fa-refresh"></i>
+                                            </a>
+                                        </li>
+                                        <li  dataset="@item.product_id" class="addItem wishlist">
+                                            <a href="#">
+                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li dataset="@item.product_id" class="addItem">
+                                            <a href="#">
+                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                   
+                }
+
+
+                <!-- vase products -->
+                @foreach (Product item in ViewBag.vaseproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddg vase">
+                        <div class="antic">
+                            <a href="https://www.google.az/search?q=google&rlz=1C1CHZL_ruAZ747AZ747&oq=google&aqs=chrome..69i57j0j69i59j0j69i60l2.5761j0j8&sourceid=chrome&ie=UTF-8">
+                                <img src="@item.Photo.photos_path" alt="">
+                            </a>
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li  dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- clock products -->
+                @foreach (Product item in ViewBag.clockproduct)
+            {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddg clock">
+                        <div class="antic">
+                            <a href="https://www.google.az/search?q=google&rlz=1C1CHZL_ruAZ747AZ747&oq=google&aqs=chrome..69i57j0j69i59j0j69i60l2.5761j0j8&sourceid=chrome&ie=UTF-8">
+                                <img src="@item.Photo.photos_path" alt="">
+                            </a>
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li  dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist"> 
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!-- tableware products -->
+                @foreach (Product item in ViewBag.tablewareproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddg tableware">
+                        <div class="antic">
+                            <a href="https://www.google.az/search?q=google&rlz=1C1CHZL_ruAZ747AZ747&oq=google&aqs=chrome..69i57j0j69i59j0j69i60l2.5761j0j8&sourceid=chrome&ie=UTF-8">
+                                <img src="@item.Photo.photos_path" alt="">
+                            </a>
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li  dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- paintings products -->
+                @foreach (Product item in ViewBag.paintingsproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddg paintings">
+                        <div class="antic">
+                            <a href="#">
+                                <img src="@item.Photo.photos_path" alt="">
+                            </a>
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist" >
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        @*put actionlink*@
+        <a class="btn btn-success btn-responsive btn_res" href="Shop.html" target="Blank">
+            View More
+            <i class="fa fa-angle-double-right right" aria-hidden="true"></i>
+        </a>
+        <div class="wishlistBox">
+            <p>Product Added!</p>
+        </div>
+        <div class="compare" id="choos">
+ 
+        </div>
+        <div class="quickview" id="Selec">
+
+        </div>
+
+       
+   
+    </section>
+    <section id="banner">
+        <div class="container">
+
+            <div class="row">
+                @foreach (Photo item in ViewBag.banner)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <a href="@item.link" target="_blank">
+                            <div class="img_box">
+
+                                <img src="@item.photos_path" alt="">
+                            </div>
+                        </a>
+                       
+                    </div>
+                }
+
+
+            </div>
+            <div class="row">
+                @foreach (Photo item in ViewBag.sbanner)
+                {
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="img_box">
+                            <a href="@item.link" target="_blank">
+                                <img src="@item.photos_path" alt="">
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="start_selling">
+        <div class="container for_b">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text">
+                        <h3>Gallery Collection</h3>
+                        <img src="~/Public/images/icon_bettwen.png" alt="">
+                        <h1>hot antique products</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="box_line"></div>
+                    <div class="box">
+                        <img src="@ViewBag.information.photo" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 padd">
+                    @foreach (information item in ViewBag.info)
+                    {
+                        <div class="circle_line">
+                            <div class="circle">
+                                <i class="@item.icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="registr">
+                                <h4>@item.infoTitle</h4>
+                                <p>@item.inText</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <a class="btn btn-success btn-responsive btn_respons" href="Shop.html">
+                Sell Now
+                <i class="fa fa-angle-double-right right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+    <section id=gallery>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text">
+                        <h3>Gallery Collection</h3>
+                        <img src="~/Public/images/icon_bettwen.png" alt="">
+                        <h1>hot antique products</h1>
+                    </div>
+                    <div class="products_list">
+                        <ul>
+                            <li class="sechb active" id="allb">
+                                All Products
+                            </li>
+                            <li  class="sechb" id="vaseb">
+                                Antique vase
+                            </li>
+                            <li class="sechb" id="clockb">
+                                Small Clock
+                            </li>
+                            <li class="sechb" id="tablewareb">
+                                Tableware
+                            </li>
+                            <li class="sechb" id="paintingsb">
+                                Paintings
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row_all">
+                <!-- all products -->
+                @foreach (Product item in ViewBag.secallproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddgb allb">
+                        <div class="antic">
+                            <img src="@item.Photo.photos_path" alt="">
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- vase products -->
+                @foreach (Product item in ViewBag.secvaseproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddgb vaseb">
+                        <div class="antic">
+                            <a>
+                                <img src="@item.Photo.photos_path" alt="">
+                            </a>
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- clock products -->
+                @foreach (Product item in ViewBag.secclockproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddgb clockb">
+                        <div class="antic">
+                            <img src="@item.Photo.photos_path" alt="">
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- tableware products -->
+                @foreach (Product item in ViewBag.sectablewareproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddgb tablewareb">
+                        <div class="antic">
+                            <img src="@item.Photo.photos_path" alt="">
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview">>
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- paintings products -->
+                @foreach (Product item in ViewBag.secpaintingsproduct)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 paddgb paintingsb">
+                        <div class="antic">
+                            <img src="@item.Photo.photos_path" alt="">
+                            <div class="text">
+                                <h4>
+                                    <a>@item.product_name</a>
+                                </h4>
+                                <p>$@item.product_price.00</p>
+                            </div>
+                            <div class="box">
+                                <ul>
+                                    <li dataset="@item.product_id" class="fQuickview"> 
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="fCompare">
+                                        <a href="#">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem wishlist">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li dataset="@item.product_id" class="addItem">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        @*add actionLink*@
+        <a class="btn btn-success btn-responsive btn_res" href="Shop.html" target="Blank">
+            View More
+            <i class="fa fa-angle-double-right right" aria-hidden="true"></i>
+        </a>
+        <div class="quickview" id="Selec">
+
+        </div>
+        <div class="wishlistBox">
+            <p>Product Added!</p>
+        </div>
+    </section>
+    <section id=gallery>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text">
+                        <h3>Gallery Collection</h3>
+                        <img src="~/Public/images/icon_bettwen.png" alt="">
+                        <h1>ALL SELLER ANTIQUE</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row f_btn">
+                @foreach (Photo item in ViewBag.photos)
+                {
+                    <div class="col-md-3 col-sm-6 col-xs-12 padd">
+                        <div class="antic">
+                            <img src="@item.photos_path" alt="">
+                            <div class="text">
+                                <h4>
+                                    <a href="Home.html">@item.photo_text</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+        <a class="btn btn-success btn-responsive btn_respons" href="Shop.html" target="Blank">
+            View More
+            <i class="fa fa-angle-double-right right" aria-hidden="true"></i>
+        </a>
+    </section>
+    <section id="new">
+        <div class="container fmarg">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text">
+                        <h3>Lastest new of week</h3>
+                        <img src="~/Public/images/icon_bettwen.png" alt="">
+                        <h1>ANTIQUE TREND BLOG</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row marg">
+                @foreach (Blog item in ViewBag.fblog)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="img_box">
+                            <a href="">
+                                <img src="@item.photo" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="blog_box">
+                            <a href="#">@item.blog1</a>
+                            <div class="line"></div>
+                            <h3>@item.info_title</h3>
+                            <div class="line"></div>
+                            <ul>
+                                <li>
+                                    <i class="@item.clink" aria-hidden="true"></i>
+                                    <p>@item.date</p>
+                                </li>
+                                <li>
+                                    <i class="@item.ulink" aria-hidden="true"></i>
+                                    <p> @item.user_type</p>
+                                </li>
+                                <li>
+                                    <i class="@item.comlink" aria-hidden="true"></i>
+                                    <p>@item.comments</p>
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                            <p>@item.text.Substring(0, 110)</p>
+                            <div class="line"></div>
+                            <a class="btn btn-success btn-responsive btn_res" href="#">View Post</a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row marg">
+                @foreach (Blog item in ViewBag.blog)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="blog_box">
+                            <a href="#">@item.blog1</a>
+                            <div class="line"></div>
+                            <h3>@item.info_title</h3>
+                            <div class="line"></div>
+                            <ul>
+                                <li>
+                                    <i class="@item.clink" aria-hidden="true"></i>@item.date
+                                </li>
+                                <li>
+                                    <i class="@item.ulink" aria-hidden="true"></i>@item.user_type
+                                </li>
+                                <li>
+                                    <i class="@item.comlink" aria-hidden="true"></i>@item.comments
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                            <p>
+                                @item.text.Substring(0, 108)
+                            </p>
+                            <div class="line"></div>
+                            <a class="btn btn-success btn-responsive btn_res" href="#">View Post</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="img_box">
+                            <a>
+                                <img src="@item.photo" alt="">
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="logos">
+        <div class="container">
+            <div class="row">
+                @foreach (Photo item in ViewBag.logo)
+                {
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <img src="@item.photos_path" alt="">
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+   
+

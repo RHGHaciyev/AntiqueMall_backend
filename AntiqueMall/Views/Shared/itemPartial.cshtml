@@ -1,0 +1,45 @@
+﻿
+@model AntiqueMall.Models.Product
+
+
+<div class="row main">
+    <div class="col-md-12">
+        <a href="#">
+            <img src="@Model.Photo.photos_path" alt="Alternate Text" />
+        </a>
+        <div class="text">
+            <h5>
+                <a>@Model.product_name</a>
+            </h5>
+
+            <div class="priceb"><span class="itemnumber">1</span> *$@Model.product_price.00</div>
+        </div>
+        <i class="fa fa-trash-o" dataset="@Model.product_id"></i>
+    </div>
+</div>
+<div class="static">
+    <hr>
+    <h5>Subtotal:$@Model.product_price.00</h5>
+    <hr>
+    <span>
+    @Html.ActionLink("ViewCart", "viewCart","Main" ,new {@class= "btn btn-success btn-responsive btn_res" })
+    </span>
+    <span><a class="btn btn-success btn-responsive btn_res" href="#">CHECKOUT</a></span>
+</div> 
+
+<script>
+    $(document).ready(function () {
+        $(".main i").click(function () {
+            $(this).parent().first().remove()
+            $(".latest_l .itemnumber")[0].innerHTML = $(".main i").length - 0;
+            if ($(".main i").length < 1) {
+                $(".itemB .static").css({ "display": "none" })
+                $(".itemB p").css({ "display": "block" }); 
+            }
+        });
+   
+        $(".latest_l .itemnumber")[0].innerHTML = + $(".main i").length;
+
+    })
+   
+    </script>

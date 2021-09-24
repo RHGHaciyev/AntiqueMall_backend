@@ -1,0 +1,55 @@
+﻿
+<html>
+<body>
+
+    <section id="userPage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <nav>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Dashboard", "UserPage", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Orders", "UserOrders", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Downloads", "UserDownloads", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Addresses", "UserAdress", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Account details", "UserDetails", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Logout", "Home", "Main")
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-8" id="check">
+                    <div class="userDesc">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="foldable_check">
+                                    <ul>
+                                        <li class="active_li">
+                                            <i class="fa fa-info-circle" aria-hidden="true">@Html.ActionLink("Go Shop", "Home", "Main", new { @class = "Obtn_res" })</i>
+                                            <span>No downloads available yet.</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

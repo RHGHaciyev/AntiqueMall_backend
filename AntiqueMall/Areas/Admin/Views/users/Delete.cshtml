@@ -1,0 +1,81 @@
+﻿@model AntiqueMall.Models.user
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2><em>Delete</em></h2>
+
+<h3><em>Are you sure you want to delete this?</em></h3>
+<div>
+    <h4>user</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.idea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idea)
+        </dd>
+
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.shopVintage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shopVintage)
+        </dd>
+
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-primary", style="width:150px;" />
+            <a href="/Admin/users/Index" class="btn btn-primary ", style="width:150px;">Back to List</a>
+        </div>
+    }
+</div>

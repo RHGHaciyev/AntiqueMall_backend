@@ -1,0 +1,42 @@
+﻿@model AntiqueMall.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2><em>Details slider</em></h2>
+<hr />
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+        <hr />
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+        <hr />
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.text)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-primary", @style = "width:150px;" })
+    <a href="/Admin/Sliders/Index" class="btn btn-primary " ,style="width:150px; display:block;margin-bototm:13px;">Back to List</a>
+</p>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="feb063f7c9734b5db237773640bfee71" Name="Diagram1">
+        <EntityTypeShape EntityType="AnticDataModel.Aboutf" Width="1.5" PointX="10.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Adminsp" Width="1.5" PointX="10.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Billing" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Blog" Width="1.5" PointX="6" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.BotText" Width="1.5" PointX="7.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.box" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Cart" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Category" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Comment" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Description" Width="1.5" PointX="9.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.fsecslide" Width="1.5" PointX="11.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.information" Width="1.5" PointX="12.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Menu" Width="1.5" PointX="13" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Most_given_questions" Width="1.5" PointX="12.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Order_s" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Paragraph" Width="1.5" PointX="2.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Photo" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Product_tags" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Product" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.select" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.selectclock" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.selectShop" Width="1.5" PointX="0.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.selectTableware" Width="1.5" PointX="0.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Send_question" Width="1.5" PointX="7.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Setting" Width="1.5" PointX="9.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Slider" Width="1.5" PointX="13.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.StartSelling" Width="1.5" PointX="11.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Submenu" Width="1.5" PointX="10.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.sysdiagram" Width="1.5" PointX="13.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.Team" Width="1.5" PointX="14.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.user" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnticDataModel.vaseselect" Width="1.5" PointX="0.75" PointY="24.125" IsExpanded="true" />
+        <AssociationConnector Association="AnticDataModel.FK_Billing_Cart" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Billing_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_comments_Blog" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_box_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_box" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_comments_users" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_menu_Submenu" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Order_s_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Order_s_users" ManuallyRouted="true" >
+          <ConnectorPoint PointX="7.25" PointY="3.8840950520833331" />
+          <ConnectorPoint PointX="7.25" PointY="4.48605353227474" />
+          <ConnectorPoint PointX="7.4270833333333339" PointY="4.48605353227474" />
+          <ConnectorPoint PointX="7.4270833333333339" PointY="9.4117211328125059" />
+          <ConnectorPoint PointX="8.25" PointY="9.4117211328125059" />
+        </AssociationConnector>
+        <AssociationConnector Association="AnticDataModel.FK_Products_Photos" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_Product_tags" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_select" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_selectclock" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_selectShop" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_selectTableware" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_Products_vaseselect" ManuallyRouted="false" />
+        <AssociationConnector Association="AnticDataModel.FK_select_Products" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

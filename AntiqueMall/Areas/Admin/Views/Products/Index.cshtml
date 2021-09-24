@@ -1,0 +1,76 @@
+﻿@model IEnumerable<AntiqueMall.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2><em>Products</em></h2>
+<hr />
+<div class="col-md-12">
+    <a href="/Admin/Products/Create" class="btn btn-primary btn-block">Create new product</a>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            <h4 style="color:#0A5FC4;">Name</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">Price</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">Availability</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">Number</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">Weight</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">Description</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">CategoryName</h4>
+        </th>
+        <th>
+            <h4 style="color:#0A5FC4;">ProductPhoto</h4>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.availability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Category_Name)
+        </td>
+        <td>
+            <img class="img-responsive" style="width:130px;" src="@item.Photo.photos_path" alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.product_id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.product_id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.product_id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" })
+        </td>
+    </tr>
+}
+
+</table>

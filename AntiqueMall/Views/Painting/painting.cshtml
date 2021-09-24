@@ -1,0 +1,224 @@
+﻿
+@using AntiqueMall.Models;
+
+<!DOCTYPE html>
+<body>
+    <section id="paint_slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 padd">
+                    @foreach (fsecslide item in ViewBag.slide)
+                    {
+                        <div class="slide" style="background:url(@item.photo);">
+                            <div class="text">
+                                <h1>@item.title</h1>
+                                <p>@item.text</p>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="paint_gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sorting">
+                        <p>Showing 1–12 of 20 results</p>
+                        <div class="form">
+                            <select name="Default Sorting" class="sorting">
+                                <option value="volvo">Default sorting</option>
+                                <option value="saab">Sort by popularity</option>
+                                <option value="fiat">Sort by newness</option>
+                                <option value="audi">Sort by price:low to hight</option>
+                                <option value="audi">Sort by price: high to low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8 right_side">
+                        <div class="row">
+                            @foreach (Product item in ViewBag.paint)
+                            {
+                                <div class="col-md-4 col-sm-6 col-xs-12 padd">
+                                    <div class="antic">
+                                        <img src="@item.Photo.photos_path" alt="">
+                                        <div class="text">
+                                            <h4>
+                                                <a>@item.product_name</a>
+                                            </h4>
+                                            <p>$@item.product_price.00</p>
+                                        </div>
+
+                                        <div class="box">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-search"></i>
+                                                    </a>
+                                                </li>
+                                                <li dataset="@item.product_id" class="fCompare">
+                                                    <a href="#">
+                                                        <i class="fa fa-refresh"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+
+                        </div>
+                        <div class="change_page">
+                            <p class="number">
+                                <a href="painting.html">
+                                    <span class="first">1</span>
+                                </a>
+                                <a href="painting2.html">
+                                    <span class="second">2</span>
+                                </a>
+                                <a href="painting2.html">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 left_side">
+                        <h3>Search</h3>
+                        <div class="lines">
+                            <div class="first"></div>
+                        </div>
+                        <div class="search_part">
+                            <input type="search" class="search" placeholder="Search">
+                            <a href="#" class="search_icon">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <h3 class="second">FILTER BY PRICE</h3>
+                        <div class="lines">
+                            <div class="first"></div>
+                        </div>
+                        <input id="fRange" type="range" min="25" max="88" value="25" class="price_value">
+                        <input id="fRange1" type="range" min="25" max="88" value="88" class="price_value1">
+
+                        <div class="amounts">
+                            <button type="submit" class="sub_btn">Filter</button>
+                            <div class="price_part">
+                                <p>
+                                    Price:&nbsp$
+                                    <span id="from"></span>&nbsp - &nbsp$
+                                    <span id="to"></span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="product_category">
+                            <h3 class="second">Product Categories</h3>
+                            <div class="lines">
+                                <div class="first"></div>
+                            </div>
+                            <ul>
+                                @foreach (Category item in ViewBag.categories)
+                                {
+                                    <li>
+                                        <a href="#">@item.Category_Name</a>
+                                        <p>@item.product_number</p>
+                                    </li>
+                                    <div class="lines"></div>
+                                }
+
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3 class="second">Products</h3>
+                            <div class="lines">
+                                <div class="first"></div>
+                            </div>
+                            <div class="img_box">
+                                <img src="~/Public/images/plate4.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="#">Cabinet Plate</a>
+                                <p class="f_shop">$47.00</p>
+                            </div>
+                            <div class="lines"></div>
+                            <div class="img_box">
+                                <img src="~/Public/images/plate3-small.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="#">Plate Painted With A View Of Riga</a>
+                                <p class="f_shop">$67.00</p>
+                            </div>
+                            <div class="lines"></div>
+                            <div class="img_box">
+                                <img src="~/Public/images/drink2-small.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="#">Matched Pairn</a>
+                                <p class="f_shop">$87.00</p>
+                            </div>
+                            <div class="lines"></div>
+                            <div class="img_box">
+                                <img src="~/Public/images/drink3-small.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="#">Acid Etches Ewer Bu Baccarat</a>
+                                <p class="f_shop">$55.00</p>
+                            </div>
+                            <div class="lines"></div>
+                            <div class="img_box">
+                                <img src="~/Public/images/european2-small.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="#">Noise In The Classroom</a>
+                                <p class="f_shop">$67.00</p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="product_tags">
+                            <h3>Product Tags</h3>
+                            <div class="lines">
+                                <div class="first"></div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="Clock.html" target="Blank">clock</a>
+                                </li>
+                                <li>
+                                    <a href="painting.html" target="Blank">painting</a>
+                                </li>
+                                <li>
+                                    <a href="Tableware.html" target="Blank">tableware</a>
+                                </li>
+                                <li>
+                                    <a href="Vase.html" target="Blank">Vase</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="compare" id="choos">
+
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+

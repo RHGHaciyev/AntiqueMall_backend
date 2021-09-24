@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AntiqueMall.Models.user>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+
+<h2><em>Users</em></h2>
+
+<div class="row">
+<div class="col-md-12">
+    <a href="/Admin/users/Create" class="btn btn-primary btn-block">Create new user</a>
+</div>
+</div>
+<table class="table table-bordered table-striped transparent">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopVintage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+
+        <td>
+            
+            <img class="img-circle" src="@item.photo" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopVintage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id },new {@class="btn btn-primary btn-block",@style="margin-bottom:2px;" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" })
+        </td>
+    </tr>
+}
+
+</table>

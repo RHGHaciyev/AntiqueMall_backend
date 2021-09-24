@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AntiqueMall.Models.Most_given_questions>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2><em>F.A.Q</em></h2>
+<hr />
+<div class="col-md-12">
+    <a href="/Admin/Most_given_questions/Create" class="btn btn-primary btn-block">Add New</a>
+</div>
+<table class="table table-borderd table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.answer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.answer)
+        </td>
+        <td>
+            <a href="/Admin/Most_given_questions/Create" class="btn btn-primary btn-block">Edit</a>
+            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px;" })
+        </td>
+    </tr>
+}
+
+</table>

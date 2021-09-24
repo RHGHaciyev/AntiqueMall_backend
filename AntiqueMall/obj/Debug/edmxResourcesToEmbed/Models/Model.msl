@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AnticDataModelStoreContainer" CdmEntityContainer="AnticDataEntities">
+    <EntitySetMapping Name="Aboutfs">
+      <EntityTypeMapping TypeName="AnticDataModel.Aboutf">
+        <MappingFragment StoreEntitySet="Aboutf">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Aboutem" ColumnName="Aboutem" />
+          <ScalarProperty Name="emphoto" ColumnName="emphoto" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="icontitle" ColumnName="icontitle" />
+          <ScalarProperty Name="icontext" ColumnName="icontext" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adminsps">
+      <EntityTypeMapping TypeName="AnticDataModel.Adminsp">
+        <MappingFragment StoreEntitySet="Adminsp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Billings">
+      <EntityTypeMapping TypeName="AnticDataModel.Billing">
+        <MappingFragment StoreEntitySet="Billing">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+          <ScalarProperty Name="names" ColumnName="names" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="AnticDataModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="blog1" ColumnName="blog" />
+          <ScalarProperty Name="info_title" ColumnName="info_title" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="clink" ColumnName="clink" />
+          <ScalarProperty Name="ulink" ColumnName="ulink" />
+          <ScalarProperty Name="comlink" ColumnName="comlink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BotTexts">
+      <EntityTypeMapping TypeName="AnticDataModel.BotText">
+        <MappingFragment StoreEntitySet="BotText">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boxes">
+      <EntityTypeMapping TypeName="AnticDataModel.box">
+        <MappingFragment StoreEntitySet="box">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="AnticDataModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="total_price" ColumnName="total_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="AnticDataModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="product_number" ColumnName="product_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="AnticDataModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="blog_id" ColumnName="blog_id" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="request" ColumnName="request" />
+          <ScalarProperty Name="comment_text" ColumnName="comment_text" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="leave_text" ColumnName="leave_text" />
+          <ScalarProperty Name="post_id" ColumnName="post_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Descriptions">
+      <EntityTypeMapping TypeName="AnticDataModel.Description">
+        <MappingFragment StoreEntitySet="Description">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="description_title" ColumnName="description_title" />
+          <ScalarProperty Name="description_text" ColumnName="description_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fsecslides">
+      <EntityTypeMapping TypeName="AnticDataModel.fsecslide">
+        <MappingFragment StoreEntitySet="fsecslide">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="information">
+      <EntityTypeMapping TypeName="AnticDataModel.information">
+        <MappingFragment StoreEntitySet="information">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="infoTitle" ColumnName="infoTitle" />
+          <ScalarProperty Name="inText" ColumnName="inText" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="AnticDataModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sub_menu_id" ColumnName="sub_menu_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Most_given_questions">
+      <EntityTypeMapping TypeName="AnticDataModel.Most_given_questions">
+        <MappingFragment StoreEntitySet="Most_given_questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="faqemTitle" ColumnName="faqemTitle" />
+          <ScalarProperty Name="faqemPhoto" ColumnName="faqemPhoto" />
+          <ScalarProperty Name="faqTitle" ColumnName="faqTitle" />
+          <ScalarProperty Name="faqText" ColumnName="faqText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_s">
+      <EntityTypeMapping TypeName="AnticDataModel.Order_s">
+        <MappingFragment StoreEntitySet="Order_s">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="Purchase_date" ColumnName="Purchase_date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="actions" ColumnName="actions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paragraphs">
+      <EntityTypeMapping TypeName="AnticDataModel.Paragraph">
+        <MappingFragment StoreEntitySet="Paragraph">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="paragraph1" ColumnName="paragraph" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="AnticDataModel.Photo">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="photo_id" ColumnName="photo_id" />
+          <ScalarProperty Name="photos_path" ColumnName="photos_path" />
+          <ScalarProperty Name="photo_text" ColumnName="photo_text" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_tags">
+      <EntityTypeMapping TypeName="AnticDataModel.Product_tags">
+        <MappingFragment StoreEntitySet="Product_tags">
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+          <ScalarProperty Name="idName" ColumnName="idName" />
+          <ScalarProperty Name="className" ColumnName="className" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="AnticDataModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="em_title" ColumnName="em_title" />
+          <ScalarProperty Name="em_photo" ColumnName="em_photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_price" ColumnName="product_price" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+          <ScalarProperty Name="photo_id" ColumnName="photo_id" />
+          <ScalarProperty Name="product_number" ColumnName="product_number" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="dimensions" ColumnName="dimensions" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="box_id" ColumnName="box_id" />
+          <ScalarProperty Name="select_id" ColumnName="select_id" />
+          <ScalarProperty Name="select_clock_id" ColumnName="select_clock_id" />
+          <ScalarProperty Name="selectTableware_id" ColumnName="selectTableware_id" />
+          <ScalarProperty Name="select_vase_id" ColumnName="select_vase_id" />
+          <ScalarProperty Name="select_shop_id" ColumnName="select_shop_id" />
+          <ScalarProperty Name="leftselectId" ColumnName="leftselectId" />
+          <ScalarProperty Name="product_type" ColumnName="product_type" />
+          <ScalarProperty Name="clas" ColumnName="clas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="selects">
+      <EntityTypeMapping TypeName="AnticDataModel.select">
+        <MappingFragment StoreEntitySet="select">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="selectclocks">
+      <EntityTypeMapping TypeName="AnticDataModel.selectclock">
+        <MappingFragment StoreEntitySet="selectclock">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="selectShops">
+      <EntityTypeMapping TypeName="AnticDataModel.selectShop">
+        <MappingFragment StoreEntitySet="selectShop">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="selectTablewares">
+      <EntityTypeMapping TypeName="AnticDataModel.selectTableware">
+        <MappingFragment StoreEntitySet="selectTableware">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Send_question">
+      <EntityTypeMapping TypeName="AnticDataModel.Send_question">
+        <MappingFragment StoreEntitySet="Send_question">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="question_title" ColumnName="question_title" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="message_text" ColumnName="message_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="AnticDataModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="h_menu_name" ColumnName="h_menu_name" />
+          <ScalarProperty Name="sell_text" ColumnName="sell_text" />
+          <ScalarProperty Name="em_title" ColumnName="em_title" />
+          <ScalarProperty Name="contactTypes" ColumnName="contactTypes" />
+          <ScalarProperty Name="contact_links" ColumnName="contact_links" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="weblink" ColumnName="weblink" />
+          <ScalarProperty Name="gallery_col" ColumnName="gallery_col" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="Links" ColumnName="Links" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliders">
+      <EntityTypeMapping TypeName="AnticDataModel.Slider">
+        <MappingFragment StoreEntitySet="Slider">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StartSellings">
+      <EntityTypeMapping TypeName="AnticDataModel.StartSelling">
+        <MappingFragment StoreEntitySet="StartSelling">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="info_title" ColumnName="info_title" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Submenus">
+      <EntityTypeMapping TypeName="AnticDataModel.Submenu">
+        <MappingFragment StoreEntitySet="Submenu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AnticDataModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="AnticDataModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="emtitle" ColumnName="emtitle" />
+          <ScalarProperty Name="emphoto" ColumnName="emphoto" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="persinfo" ColumnName="persinfo" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="AnticDataModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="idea" ColumnName="idea" />
+          <ScalarProperty Name="shopVintage" ColumnName="shopVintage" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Box" ColumnName="Box" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vaseselects">
+      <EntityTypeMapping TypeName="AnticDataModel.vaseselect">
+        <MappingFragment StoreEntitySet="vaseselect">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

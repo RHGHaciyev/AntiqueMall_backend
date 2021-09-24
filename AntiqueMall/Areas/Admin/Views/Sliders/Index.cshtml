@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AntiqueMall.Models.Slider>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2><em>Slider</em></h2>
+<hr />
+<div class="col-md-12">
+    <a href="/Admin/Sliders/Create" class="btn btn-primary btn-block">Add Slider</a>
+</div>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.text)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img style="width:230px;" src="@item.photo"  />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.text)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px" })
+            @Html.ActionLink("Details", "Details", new { id=item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.id }, new { @class = "btn btn-primary btn-block", @style = "margin-bottom:2px" })
+        </td>
+    </tr>
+}
+
+</table>

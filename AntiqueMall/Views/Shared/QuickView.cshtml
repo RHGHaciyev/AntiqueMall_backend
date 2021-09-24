@@ -1,0 +1,171 @@
+﻿
+@using AntiqueMall.Models;
+
+<div class="bord">
+    <div class="reg">
+        <div class="reg_padd" id="category">
+            <div class="container marg">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12 padd">
+                        <div class="slider">
+                            <div class="slide_in">
+                                @foreach (Product item in ViewBag.product)
+                                {
+                                    <div class="slide_c">
+                                        <img src="@Model.Photo.photos_path" alt="">
+                                    </div>
+                                }
+                                
+                            </div>
+
+                            <div class="icon">
+                                <a href="#" id="prev">
+                                    <i class="fa fa-angle-left left"></i>
+                                </a>
+                                <a href="#" id="next">
+                                    <i class="fa fa-angle-right right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 _right">
+
+                        <div class="right_site">
+                            <div class="col-md-12">
+                                <div class="top_part">
+                                    <h3>@Model.product_name</h3>
+                                    <div class="marg"></div>
+                                    <span>$@Model.product_price.00</span>
+                                    <div class="marg"></div>
+                                    <p>
+                                        @Model.description
+                                    </p>
+                                    <div class="marg"></div>
+                                    <a class="link" href="#">
+                                        <i class="fa fa-truck" aria-hidden="true"></i>Buyer Protection Guaranteed
+                                    </a>
+                                    <div class="marg"></div>
+                                    <div class="num">
+                                        <input type="number" id="number" value="1" />
+                                        <button id="plus" data-inline="true">+</button>
+                                        <button id="minus" data-inline="true">-</button>
+                                    </div>
+
+                                    <a class="btn btn-success btn-responsive btn_res" href="#">ADD TO CART</a>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="bottom_part">
+                                    <ul>
+                                        <li>
+                                            SKU:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Model.dimensions
+                                        </li>
+                                        <ul class="sec_ul">
+                                            Categories:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <li>
+                                                <a href="painting.html">Painting,</a>
+                                            </li>
+                                            <li>
+                                                <a href="Tableware.html">Tablevare,</a>
+                                            </li>
+                                            <li>
+                                                <a href="Vase.html">Vase,</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="sec_ul">
+                                            Tags:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <li>
+                                                <a href="Clock.html">Clock,</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="painting.html">Painting,</a>
+                                            </li>
+                                            <li>
+                                                <a href="Tableware.html">Tablevare,</a>
+                                            </li>
+
+                                        </ul>
+                                        <div class="marg"></div>
+                                        <ul class="sec_ul">
+                                            Share:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <li class="latest_li">
+                                                <a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="latest_li">
+                                                <a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="latest_li">
+                                                <a href="#">
+                                                    <i class="fa fa-pinterest"></i>
+                                                </a>
+                                            </li>
+                                            <li class="latest_li">
+                                                <a href="#">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li class="latest_li">
+                                                <a href="#">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                    <div class="latest_btn">
+                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        <a class="btn btn-success btn-responsive btn_res" href="#">ADD TO WISHLISH</a>
+                                    </div>
+                                    <div class="latest_btn">
+                                        <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                                        <a class="btn btn-success btn-responsive btn_res" href="#">COMPARE</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <i class="fa fa-times close_r" aria-hidden="true"></i>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" 
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous">
+</script>
+
+    <script >
+        $(document).ready(function () {
+            $(".fQuickview").click(function () {
+                var a = $(this).attr("dataset");
+                $.ajax({
+                    type: "Get",
+                    data: {
+                        prod: a,
+                    },
+                    url: "http://localhost:51618/Main/view/",
+                    contentType: "Html",
+                    success: function (res) {
+                        $("#Selec").html(res)
+
+                    }
+                })
+            })
+
+            $(".close_r").click(function () {
+                $("#Selec").fadeOut();
+            })
+        });
+    </script>

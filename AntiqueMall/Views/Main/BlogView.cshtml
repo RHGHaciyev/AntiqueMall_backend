@@ -1,0 +1,224 @@
+﻿@using AntiqueMall.Models;
+<section id="paint_slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 padd">
+                <div class="slide">
+                    <div class="text">
+                        <h1 class="ViewH">16 Delicious Dining Rooms</h1>
+                        <span class=date>
+                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                            <time>OCTOBER 17, 2017 </time>
+                            <span>
+                                <i class="fa fa-tags" aria-hidden="true"></i>1 MINUTE READ
+                            </span>
+                            </time>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                @foreach (Blog item in ViewBag.BlogView)
+                {
+                    <img src="@item.photo" alt="">
+                    <p>@item.text.Substring(0,68)</p>
+                    <p>
+                        @item.text.Substring(68,250)
+                    </p>
+                    <p>
+                        @item.text.Substring(250,225)
+                    </p>
+                    <p>
+                        @item.text.Substring(471,208)
+                        
+                    </p>
+                    <p>
+                        @item.text.Substring(675,245)   
+                    </p>
+                }
+                
+
+
+                <div class="lines">
+
+                </div>
+                <span class="changepage">
+                    <i class="fa fa-chevron-left poslef" aria-hidden="true"></i>
+                    @Html.ActionLink("13 Spaces with High-Style Ceilings", "BlogView13", "Main")
+                    <p class="prevpost">previous post</p>
+                </span>
+                <form action="">
+
+
+                    <div class="postBox">
+                        <h4>Leave your comment</h4>
+                        <div class="line"></div>
+                        <textarea name="" id="" rows="7" placeholder="Your comment"></textarea>
+                        <p class="fpost">
+                            <span>Name*</span>
+                            <label for="name"></label>
+                            <input type="text" class="postin">
+                        </p>
+                        <p class="fpost">
+                            <span>Email*</span>
+                            <label for="email"></label>
+                            <input type="text" class="postin">
+                        </p>
+                        <p class="fpost">
+                            <span>Website</span>
+                            <label for="website"></label>
+                            <input type="text" class="postin">
+                        </p>
+                        <a class="btn btn-success btn-responsive btn_res" href="#" target="Blank">
+                            Post Comment
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="col-md-4">
+                <div class="search_part">
+                    <input type="search" class="search" placeholder="Search">
+                    <a href="#" class="search_icon">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+                <div class="product_category">
+                    <h3 class="second">Recent Posts</h3>
+                    <div class="lines">
+                        <div class="first"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            @Html.ActionLink("16 Delicious Dining Rooms", "BlogView", "Main")
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            @Html.ActionLink("13 Spaces with High-Style Ceilings", "BlogView13", "Main")
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            @Html.ActionLink("Intelligent Design: 15 Gorgeous Rooms for Bookworms", "BlogView15", "Main")
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            @Html.ActionLink("Hello world!", "HelloWorld", "Main")
+                        </li>
+                    </ul>
+                </div>
+                <div class="product_category">
+                    <h3 class="second">Recent Comments</h3>
+                    <div class="lines">
+                        <div class="first"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">admin on Mythological cartel clock</a>
+
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">admin on Silvered and gilt bronze</a>
+
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">admin on Mythological cartel clock</a>
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">admin on Acid etches ewer bu baccarat</a>
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">A WordPress Commenter on Hello world!</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product_category">
+                    <h3 class="second">ARCHIVES</h3>
+                    <div class="lines">
+                        <div class="first"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">October 2017</a>
+
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">September 2017</a>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product_category">
+                    <h3 class="second">CATEGORIES</h3>
+                    <div class="lines">
+                        <div class="first"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">Blog</a>
+
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">Uncategorized</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="product_category">
+                    <h3 class="second">META</h3>
+                    <div class="lines">
+                        <div class="first"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">Register</a>
+
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">Log in</a>
+
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">
+                                Entries
+                                <abbr title="Really Simply Syndication">RSS</abbr>
+                            </a>
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">
+                                Comments
+                                <abbr title="Really Simply Syndication">RSS</abbr>
+                            </a>
+                        </li>
+                        <div class="lines"></div>
+                        <li>
+                            <a href="#">WordPress.org</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="logos">
+ 
+</section>

@@ -1,0 +1,85 @@
+﻿@using AntiqueMall.Models;
+
+<html>
+<body>
+ 
+    <!-- slider -->
+    <section id="paint_slider">
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (var item in ViewBag.slide)
+                {
+                    <div class="slide" style="background:url(@item.photo)">
+                        <div class="text">
+                            <h1>@item.title</h1>
+                            <p>@item.text</p>
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="accord">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="foldable">
+                        @foreach (Most_given_questions item in ViewBag.question)
+                        {
+                            <h1 class="click_btn">
+                                @item.question
+                                <i class="fa fa-angle-down down"></i>
+                                <i class="fa fa-angle-up up"></i>
+                            </h1>
+                            <div class="down_page">
+                                <p>
+                                    @item.answer
+                                </p>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="question">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    @foreach (Most_given_questions item in ViewBag.questionf)
+                    {
+                        <div class="text">
+                            <h3>@item.faqemTitle</h3>
+                            <img src="@item.faqemPhoto" alt="">
+                            <h1>@item.faqTitle</h1>
+                            <P>
+                               @item.faqText
+                            </P>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 center">
+                    <div class="message">
+                        <input type="text" placeholder="Name*">
+                        <input type="text" placeholder="E-Mail*">
+                        <textarea name="text" placeholder="Message*" class="area" cols="30" rows="10"></textarea>
+                    </div>
+                    <a class="btn btn-success btn-responsive btn_res" href="#">
+                        send question
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+   
+    
+</body>
+
+</html>

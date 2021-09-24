@@ -1,0 +1,35 @@
+﻿@model AntiqueMall.Models.Menu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Menu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <hr />
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.Submenu.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Submenu.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

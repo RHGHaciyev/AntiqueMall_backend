@@ -1,0 +1,55 @@
+﻿
+<html>
+<body>
+
+    <section id="userPage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <nav>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Dashboard", "UserPage", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Orders", "UserOrders", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Downloads", "UserDownloads", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Addresses", "UserAdress", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Account details", "UserDetails", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Logout", "Home", "Main")
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-8" >
+                    <div class="userDesc">
+                        <p>The following addresses will be used on the checkout page by default.</p>
+                        <address >
+                            <p>Billing Address:</p>
+                            <a class="edit">Edit</a>
+                            <p>@Session["username"]</p>
+                            <p>Australia</p>
+                        </address>
+                        <address class="shiping">
+                           <p>Shipping Address:</p>
+                            <a class="edit">Edit</a>
+                            <p>You have not set up this type of address yet.</p>
+                 </address>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

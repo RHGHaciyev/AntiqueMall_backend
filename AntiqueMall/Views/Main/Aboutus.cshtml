@@ -1,0 +1,303 @@
+﻿@using AntiqueMall.Models;
+@model AntiqueMall.Models.Aboutf
+<html>
+<body>
+<section id="paint_slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 padd">
+                <div class="slide">
+                    <div class="text">
+                        <h1>About Us</h1>
+                        <p>Home / About Us</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About us -->
+<section id="about">
+    <div class="container padd">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12 main_r">
+                @foreach (Aboutf item in ViewBag.aboutfin)
+                {
+                    <div class="text">
+                        <h3>@item.Aboutem</h3>
+                        <img src="@item.emphoto" alt="">
+                        <h1>@item.title</h1>
+                    </div>
+                    <div class="text">
+                        <p>
+                            @item.text
+                        </p>
+                    </div>
+                }
+                
+                <div class="row">
+                    @foreach (Aboutf item in ViewBag.about)
+                    {
+                        <div class="col-md-6 col-sm-12 col-xs-12 hei">
+                            <div class="right_part">
+                                <div class="img_box">
+                                    <i class="@item.icon" aria-hidden="true"></i>
+                                </div>
+                                <div class="r_text">
+                                    <h3>@item.icontitle</h3>
+                                    <p>
+                                        @item.icontext
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+                <div class="row marg">
+                   @foreach (Aboutf item in ViewBag.aboutsec)
+                    {
+                        <div class="col-md-6 col-sm-12 col-xs-12 hei">
+                            <div class="right_part">
+                                <div class="img_box">
+                                    <i class="@item.icon" aria-hidden="true"></i>
+                                </div>
+                                <div class="r_text">
+                                    <h3>@item.icontitle</h3>
+                                    <p>
+                                        @item.icontext
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="box_line"></div>
+                    <div class="box">
+                        @foreach (Aboutf item in ViewBag.aboutfin)
+                        {
+                            <img src="@item.photo" alt="">
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="scrollnum">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text">
+                    <h3>Gallery collection</h3>
+                    <img src="~/Public/images/icon_bettwen.png" alt="">
+                    <h2>OUR HISTORY ANTIQUE</h2>
+                </div>
+                <div class="text">
+                    <p>
+                        In 2001, young, passionate, luxury real estate dealer Michael Bruno visited the historic Paris Marché aux Puces
+                        and found items of such beauty and authenticity, he was moved to purchase several for his own collection.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrollnumber">
+                    <div class="col-md-3">
+                        <h1 class='numscroller' data-min='0' data-max='5' data-delay='1.5' data-increment='1'>5</h1>
+                        <h1 class="sup">+</h1>
+                        <p>Year Experience</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class='numscroller' data-min='0' data-max='100' data-delay='30' data-increment='10'>100</h1>
+                        <h1 class="sup">%</h1>
+                        <p>Money Back Guarantee</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class='numscroller' data-min='0' data-max='90' data-delay='25' data-increment='15'>90</h1>
+                        <h1 class="sup">+</h1>
+                        <p>Products</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class='numscroller' data-min='0' data-max='1000' data-delay='90' data-increment='30'>1000</h1>
+                        <h1 class="sup">+</h1>
+                        <p>Happy Clients</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about team -->
+<section id="about_team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @foreach (Team item in ViewBag.teamt)
+                {
+                    <div class="text">
+                        <h3>@item.emtitle</h3>
+                        <img src="@item.emphoto" alt="">
+                        <h1>@item.title</h1>
+                    </div>
+                }
+                
+            </div>
+        </div>
+        <div class="teams">
+            <div class="row persons">
+                @foreach (Team item in ViewBag.teampers)
+                {
+                    <div class="col-md-3 col-sm-6">
+                        <div class="person_box">
+                            <img src="@item.photo">
+                        </div>
+                        <div class="person_text">
+                            <h1>@item.name</h1>
+                            <p>@item.profession</p>
+                            <p>
+                                @item.persinfo
+                            </p>
+                        </div>
+                        <div class="about_ul">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        </div>
+
+
+
+
+    </div>
+    </div>
+    </div>
+</section>
+    <section id="new">
+        <div class="container fmarg">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text">
+                        <h3>Lastest new of week</h3>
+                        <img src="~/Public/images/icon_bettwen.png" alt="">
+                        <h1>ANTIQUE TREND BLOG</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row marg">
+                @foreach (Blog item in ViewBag.fblog)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="img_box">
+                            <a href="">
+                                <img src="@item.photo" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="blog_box">
+                            <a href="#">@item.blog1</a>
+                            <div class="line"></div>
+                            <h3>@item.info_title</h3>
+                            <div class="line"></div>
+                            <ul>
+                                <li>
+                                    <i class="@item.clink" aria-hidden="true"></i>
+                                    <p>@item.date</p>
+                                </li>
+                                <li>
+                                    <i class="@item.ulink" aria-hidden="true"></i>
+                                    <p> @item.user_type</p>
+                                </li>
+                                <li>
+                                    <i class="@item.comlink" aria-hidden="true"></i>
+                                    <p>@item.comments</p>
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                            <p>@item.text.Substring(0, 110)</p>
+                            <div class="line"></div>
+                            <a class="btn btn-success btn-responsive btn_res" href="#">View Post</a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row marg">
+                @foreach (Blog item in ViewBag.blog)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="blog_box">
+                            <a href="#">@item.blog1</a>
+                            <div class="line"></div>
+                            <h3>@item.info_title</h3>
+                            <div class="line"></div>
+                            <ul>
+                                <li>
+                                    <i class="@item.clink" aria-hidden="true"></i>@item.date
+                                </li>
+                                <li>
+                                    <i class="@item.ulink" aria-hidden="true"></i>@item.user_type
+                                </li>
+                                <li>
+                                    <i class="@item.comlink" aria-hidden="true"></i>@item.comments
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                            <p>
+                                @item.text.Substring(0, 108)
+                            </p>
+                            <div class="line"></div>
+                            <a class="btn btn-success btn-responsive btn_res" href="#">View Post</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 top">
+                        <div class="img_box">
+                            <a>
+                                <img src="@item.photo" alt="">
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+<section id="logos">
+
+</section>
+    <script src="~/Public/jquery.numscroller-1.0.js"></script>
+    <script src="~/Public/script/numscroll.js"></script>
+</body>
+</html>

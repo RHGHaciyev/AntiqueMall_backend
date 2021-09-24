@@ -1,0 +1,213 @@
+﻿
+@using AntiqueMall.Models;
+
+<html>
+<body>
+    <section id="paint_slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 padd">
+                    @foreach (fsecslide item in ViewBag.slide) 
+                    {
+                        <div class="slide" style="background:url(@item.photo);">
+                            <div class="text">
+                                <h1>@item.title</h1>
+                                <p>@item.text</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="paint_gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sorting">
+                        <p>Showing 1–12 of 20 results</p>
+                        <div class="form">
+                            <select name="Default Sorting" class="sorting">
+                                <option value="volvo">Default sorting</option>
+                                <option value="saab">Sort by popularity</option>
+                                <option value="fiat">Sort by newness</option>
+                                <option value="audi">Sort by price:low to hight</option>
+                                <option value="audi">Sort by price: high to low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8 right_side">
+                        <div class="row">
+                            @foreach (Product item in ViewBag.paint)
+                            {
+                                <div class="col-md-4 col-sm-6 col-xs-12 padd">
+                                    <div class="antic">
+                                        <img src="@item.Photo.photos_path" alt="">
+                                        <div class="text">
+                                            <h4>
+                                                <a>@item.product_name</a>
+                                            </h4>
+                                            <p>$@item.product_price.00</p>
+                                        </div>
+                                      
+                                        <div class="box">
+       
+                                                <ul>
+                                                    <li dataset="@item.product_id" class="fQuickview">
+                                                        <a href="#">
+                                                            <i class="fa fa-search"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li dataset="@item.product_id" class="fCompare">
+                                                        <a href="#">
+                                                            <i class="fa fa-refresh"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            
+                                        </div>
+                                     
+                                    </div>
+                                </div>  
+                            }
+                            
+                        </div>
+                       
+                        <div class="change_page">
+                            <p class="number">
+                                @Html.ActionLink("1", "Painting", "Main", routeValues: null, htmlAttributes: new { @class= "first" })    
+                                @Html.ActionLink("2", "Painting2", "Main", routeValues: null, htmlAttributes: new { @class = "second" })
+                                <a href="@Url.Action("Painting2","Main")">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 left_side">
+                        <h3>Search</h3>
+                        <div class="lines">
+                            <div class="first"></div>
+                        </div>
+                        <div class="search_part">
+                            <input type="search" class="search" placeholder="Search">
+                            <a href="#" class="search_icon">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <h3 class="second">FILTER BY PRICE</h3>
+                        <div class="lines">
+                            <div class="first"></div>
+                        </div>
+                        <input id="fRange" type="range" min="25" max="88" value="25" class="price_value">
+                        <input id="fRange1" type="range" min="25" max="88" value="88" class="price_value1">
+
+                        <div class="amounts">
+                            <button type="submit" class="sub_btn">Filter</button>
+                            <div class="price_part">
+                                <p>
+                                    Price:&nbsp$
+                                    <span id="from"></span>&nbsp - &nbsp$
+                                    <span id="to"></span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="product_category">
+                            <h3 class="second">Product Categories</h3>
+                            <div class="lines">
+                                <div class="first"></div>
+                            </div>
+                            <ul>
+                                @foreach (Category item in ViewBag.categories)
+                                {
+                                    <li>
+                                        <a href="#">@item.Category_Name</a>
+                                        <p>@item.product_number</p>
+                                    </li>
+                                    <div class="lines"></div>
+                                }
+
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3 class="second">Products</h3>
+                            <div class="lines">
+                                <div class="first"></div>
+                            </div>
+                        @foreach (Product item in ViewBag.lefts)
+                        {
+                            
+                            <div class="img_box">
+                                <img src="@item.Photo.photos_path" alt="">
+                            </div>
+                                <div class="text">
+                                    <a href="#">@item.product_name</a>
+                                    <p class="f_shop">$@item.product_price.00</p>
+                                </div>
+                                <div class="lines"></div>
+                        }
+ 
+                        </div>
+                        <div class="clear"></div>
+                        <div class="product_tags">
+                            <h3>Product Tags</h3>
+                            <div class="lines">
+                                <div class="first"></div>
+                            </div>
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Clock", "Clock", "Main")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Painting", "Painting", "Main")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Tableware", "Tableware", "Main")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Vase", "Vase", "Main")
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="compare" id="choos">
+
+        </div>
+        <div class="quickview" id="Selec">
+            
+        </div>
+</section>
+    <script>
+var rangeV = document.getElementById("fRange");
+var rangeV1 = document.getElementById("fRange1");
+var result = document.getElementById("from");
+var result1 = document.getElementById("to");
+result.innerHTML = rangeV.value;
+result1.innerHTML = rangeV1.value;
+
+rangeV.oninput = function () {
+            result.innerHTML = this.value
+        }
+        rangeV1.oninput = function () {
+            result1.innerHTML = this.value
+        }
+    </script>
+</body>
+
+</html>
+

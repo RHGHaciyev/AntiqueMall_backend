@@ -1,0 +1,533 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antique/Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Public/css/animate.css">
+    <link rel="stylesheet" href="~/Public/css/style.css">
+</head>
+<body>
+    <!--Header-->
+    <section id="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-1 logo_part">
+                    <a href="@Url.Action("Home","Main")" id="logo">
+                        <img src="~/Public/images/Anticlogo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-9 col-sm-11 ">
+                    <nav id="first_list">
+                        <ul>
+                            <li>
+                                <a href="#">USD</a>
+                                <i class="fa fa-angle-down down"></i>
+                            </li>
+                            <li>
+                                <img src="~/Public/images/english_img.jpg" alt="">
+                                <a href="#" class="res_hide">English</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-pencil pencile" aria-hidden="true"></i>
+                                <a href="#" class="f_register">Join free</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-sign-in signin" aria-hidden="true"></i>
+                                <a href="#" class="f_login">Login</a>
+                               
+                            </li>
+                            <li>
+                                <i class="fa fa-search s_search"></i>
+                                <a href="#" class="sres_hide">Search</a>
+                            </li>
+                            <li class="latest_l">
+                                <a href="" title="View Cart">
+                                    <i class="fa fa-shopping-bag place"></i>
+                                    <span class="itemnumber" >0</span> Item(s)
+                                </a>
+                                <div class="itemB" id="add" dataset="0">
+                                    <p>No products in the cart.</p>
+                                </div>
+                       </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- menu-1 -->
+    <section id="menu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="second">
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Home", "Home", "Main")
+                            </li>
+                            <li>
+                                <a href="#">features</a>
+                            </li>
+                            <li>
+                                @Html.ActionLink("Shop", "Shop", "Main")
+                                <i class="fa fa-caret-down down" aria-hidden="true"></i>
+                                <ul class="shop">
+                                    <li>
+                                
+                                        @Html.ActionLink("Painting", "Painting", "Main")
+                                        
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Clock", "Clock", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Tableware", "Tableware", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Vase", "Vase", "Main")
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_page">
+                                <a href="#">pages</a>
+                                <i class="fa fa-caret-down down" aria-hidden="true"></i>
+                                <div class="pages">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h3>main page</h3>
+                                                <ul class=f_page>
+                                                    <li>
+                                                        
+                                                        @Html.ActionLink("FAQ1", "FAQ1", "Main")
+                                                    </li>
+                                                    <li>
+                                                        @Html.ActionLink("FAQ2", "FAQ2", "Main")
+                                                    </li>
+                                                    <li>
+                                                        @Html.ActionLink("Testimonial", "Testimonial", "Main")
+                                                    </li>
+                                                    <li>
+                                                        @Html.ActionLink("Testimonial2", "Testimonial2", "Main")
+                                                    </li>
+                                                    <li>
+                                                        <a href="About.html">About us</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3>featured pages</h3>
+                                                <ul class=f_page>
+                                                    <li class="registr_c">
+                                                        <a href="#">Register</a>
+                                                    </li>
+                                                    <li class="login_c">
+                                                        <a href="#">Login</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="404Page.html">404 Page</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="image_part">
+                                                    <div class="text">
+                                                        <img src="~/Public/images/page_img.jpg" class="page_lastimg">
+                                                        <div class="text_t">
+                                                            <p>June 27, 2017@09 - 11 am. PO Box CT16122 Collins Street, USA</p>
+                                                            <p class=sec_p>Five Past and Present Doll Artists to Know and Love</p>
+                                                            <ul>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Days</span>
+                                                                </li>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Hours</span>
+                                                                </li>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Minutes</span>
+                                                                </li>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Seconds</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="~/Public/images/page_img2.jpg" class="page_lastimgs">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                @Html.ActionLink("Blog", "Blog", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Contact", "Contact", "Main")
+                            </li>
+                        </ul>
+                    </nav>
+                    <i class="fa fa-bars menu_b" aria-hidden="true"></i>
+                    <a href="#" class="scrollup" style="display: inline;">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                    <!-- swipe menu -->
+                    <nav class="swipe">
+                        <h2>navigation </h2>
+                        <i class="fa fa-times close" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="Home.html">home</a>
+                            </li>
+                            <li>
+                                <a href="#">features</a>
+                            </li>
+                            <li class="li">
+                                <a href="Shop.html">
+                                    shop
+                                    <i class="fa fa-caret-down down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="shop">
+                                    <li>
+                                        <a href="painting.html">painting</a>
+                                    </li>
+                                    <li>
+                                        <a href="Clock.html">clock</a>
+                                    </li>
+                                    <li>
+                                        <a href="Tableware.html">tableware</a>
+                                    </li>
+                                    <li>
+                                        <a href="Vase.html">vase</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_page">
+                                <a href="#">pages</a>
+                                <i class="fa fa-caret-down down" aria-hidden="true"></i>
+                                <div class="pages">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h3>main page</h3>
+                                                <ul class=f_page>
+                                                    <li>
+                                                        <a href="FAQ1.html">FAQ (1column)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="FAQ2.html">FAQ (2column)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="Testimonial2.html">Testimonial (2column)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="Testimonial3.html">Testimonial (3column)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="About.html">About us</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3>featured pages</h3>
+                                                <ul class=f_page>
+                                                    <li class="registr_c">
+                                                        <a href="#">Register</a>
+                                                    </li>
+                                                    <li class="login_c">
+                                                        <a  href="#">Login</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="404Page.html">404 Page</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="image_part">
+                                                    <div class="text">
+                                                        <img src="~/Public/images/page_img.jpg" class="page_lastimg">
+                                                        <div class="text_t">
+                                                            <p>June 27, 2017@09 - 11 am. PO Box CT16122 Collins Street, USA</p>
+                                                            <p class=sec_p>Five Past and Present Doll Artists to Know and Love</p>
+                                                            <ul>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Days</span>
+                                                                </li>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Hours</span>
+                                                                </li>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <span>Minutes</span>
+                                                                </li>
+                                                                <li class="statistics">
+                                                                    0 0
+                                                                    <p class="latest_s">Seconds</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="~/Public/images/page_img2.jpg" class="page_lastimgs">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="Blog.html">blog</a>
+                            </li>
+                            <li class="latest">
+                                <a href="Contact.html">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- swipe -->
+                </div>
+            </div>
+        </div>
+        <div class="registr_page">
+            <div class="reg">
+                <div class="reg_padd">
+                    <p>UserName</p>
+                    <input type="text" placeholder="Username">
+                    <p>Email</p>
+                    <input type="text" placeholder="Email">
+                    <p>A password will be e-mailed to you.</p>
+                    <a class="btn btn-success btn-responsive btn_res" href="#">get started</a>
+                </div>
+                <div class="bot_p">
+                    <h5>Already have an account?</h5>
+                    <p>Sign in to manage your orders</p>
+                    <a class="btn btn-success btn-responsive btn f_login" href="#">Sign in</a>
+                </div>
+                <i class="fa fa-times close_r" aria-hidden="true"></i>
+            </div>
+        </div>
+        <form class="login_page">
+            <div class="reg">
+                <div class="reg_padd">
+                    <p class="hidden_p">ERROR: All fields are required.</p>
+                    <p>Username or Email Address</p>
+                    <input type="text" class="username" placeholder="Username or Email Address">
+                    <p>Password</p>
+                    <input type="text" class="password" placeholder="Password">
+                    <a id="log" class="btn btn-success btn-responsive btn_res" href="#">get started</a>
+                </div>
+                <a href="#" class="question">Forgot your password?</a>
+                <div class="bot_p">
+                    <h5>No account? Start here!</h5>
+                    <p>Easily manage your orders</p>
+                    <a class="btn btn-success btn-responsive btn f_register" href="#">Get started</a>
+                </div>
+                <i class="fa fa-times close_r" aria-hidden="true"></i>
+            </div>
+        </form>
+        <div class="reset_page">
+            <div class="reg">
+                <div class="reg_padd">
+                    <h3>Reset Password</h3>
+                    <p>Username or Email Address</p>
+                    <input type="text" placeholder="Username or Email Address">
+                    <p>
+                        Lost your password? Please enter your username or email address. You will receive a link to create a
+                        new password via email.
+                    </p>
+                    <a class="btn btn-success btn-responsive btn_res" href="#">GET NEW PASSWORD</a>
+                    <ul>
+                        <li class="log">Login in</li>
+                        &nbsp | &nbsp
+                        <li class="reg_p">Register</li>
+                    </ul>
+                </div>
+                <i class="fa fa-times close_r" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="search_page">
+            <i class="fa fa-times-circle-o close_r" aria-hidden="true"></i>
+            <input type="text" placeholder="Search">
+        </div>
+      
+    </section>
+    <!-- Header -->
+        @RenderBody()
+    <footer>
+        <section id="footer">
+            <div class="latest_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="contact">
+                                <h3>contact us</h3>
+                                <ul class="info">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                        </a>
+                                        <p class="large">PO Box CT16122 Collins Street, USA</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                        </a>
+                                        <p>+1 (2) 345 6789</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        </a>
+                                        <p>Support@yourdomain.com</p>
+                                    </li>
+                                    <li>
+                                        <a href="https://netbasejsc.com/">
+                                            <i class="fa fa-globe" aria-hidden="true"></i>https://netbasejsc.com/
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="face">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="about_market">
+                                <h3>about market</h3>
+                                <ul class="info">
+                                    <li>
+                                        @Html.ActionLink("Contact", "Contact", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("About Us", "Aboutus", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("FAQ", "FAQ1", "Main")
+                                    </li>
+                                    <li>
+                                        <a href="#">Private Police</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Site Map</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Store Location</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="about_market">
+                                <h3>COLLECTION ANTIQUE</h3>
+                                <ul class="info">
+                                    <li>
+                                        @Html.ActionLink("Clock", "Clock", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Painting", "Painting", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Tableware", "Tableware", "Main")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Vase", "Vase", "Main")
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="about_market">
+                                <h3>HELP & INFO</h3>
+                                <ul class="info">
+                                    <li>
+                                        <a href="#">Shipping Police</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Compensation First</a>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("My Account", "UserPage", "Main")
+                                    </li>
+                                    <li>
+                                        <a href="#">Return Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shipping Rates&Policies</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Manage Your Content and Devices </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row marg">
+                <div class="col-md-6 col-sm-12 col-xs-12 padd">
+                    <p class="left">
+                        Antimall - Designed by
+                        <span>Netbase JSC</span>
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 padd">
+                    <div class="pay_logo">
+                        <img src="~/Public/images/wave.jpg" alt="">
+                        <img src="~/Public/images/visa.jpg" alt="">
+                        <img src="~/Public/images/amex.jpg" alt="">
+                        <img src="~/Public/images/paypal.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            </section>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="~/Public/script/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="~/Public/script/script.js"></script> 
+ 
+</body>
+</html>

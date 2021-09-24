@@ -1,0 +1,35 @@
+﻿@model AntiqueMall.Models.Most_given_questions
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Most_given_questions</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.question)
+        </dd>
+       <hr />
+        <dt class="detaild">
+            @Html.DisplayNameFor(model => model.answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.answer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id}, new { @class = "btn btn-primary", @style = "width:150px;" })
+    <a href="/Admin/Most_given_questions/Index" class="btn btn-primary " ,style="width:150px; display:block;margin-bototm:13px;">Back to List</a>
+</p>

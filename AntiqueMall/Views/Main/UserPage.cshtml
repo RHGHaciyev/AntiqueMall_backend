@@ -1,0 +1,44 @@
+﻿<html>
+<body>
+
+    <section id="userPage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <nav>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Dashboard", "UserPage", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Orders", "UserOrders", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Downloads", "UserDownloads", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Addresses", "UserAdress", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Account details", "UserDetails", "Main")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Logout", "Home", "Main")
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-8">
+                    <div class="userDesc">
+                   <h5>Hello @Session["username"] (not @Session["username"]? <a href="@Url.Action("Home","Main")" class="logout">Log out</a>)</h5>
+                   <p>From your account dashboard you can view your recent orders, manage your shipping and billing addresses and edit your password and 
+                    account details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+﻿@model AntiqueMall.Models.Product
+
+<div class="row main">
+    <div class="col-md-12">
+        <a href="#">
+            <img src="@Model.Photo.photos_path" alt="Alternate Text" />
+        </a>
+        <div class="text">
+            <h5>
+                <a>@Model.product_name</a>
+            </h5>
+            <div class="priceb"><span class="itemnumber">1</span>*$@Model.product_price.00</div>
+        </div>
+        <i class="fa fa-trash-o" dataset="@Model.product_id"></i>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $(".latest_l .itemnumber")[0].innerHTML = + $("piceb").html;
+
+    })
+    </script>

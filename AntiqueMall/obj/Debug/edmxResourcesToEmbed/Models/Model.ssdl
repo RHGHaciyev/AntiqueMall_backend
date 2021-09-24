@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AnticDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aboutf">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aboutem" Type="nvarchar" MaxLength="50" />
+    <Property Name="emphoto" Type="nvarchar(max)" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="icon" Type="nvarchar" MaxLength="50" />
+    <Property Name="icontitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="icontext" Type="nvarchar(max)" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Adminsp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Billing">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="cart_id" Type="int" />
+    <Property Name="names" Type="nvarchar" MaxLength="100" />
+    <Property Name="surname" Type="nvarchar" MaxLength="100" />
+    <Property Name="company_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="adress" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="postcode" Type="nvarchar" MaxLength="100" />
+    <Property Name="phone" Type="int" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="notes" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="blog" Type="nvarchar" MaxLength="50" />
+    <Property Name="info_title" Type="nvarchar(max)" />
+    <Property Name="date" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="comments" Type="nvarchar(max)" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="clink" Type="nvarchar(max)" />
+    <Property Name="ulink" Type="nvarchar(max)" />
+    <Property Name="comlink" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="BotText">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="link" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="box">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="total_price" Type="float" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="product_number" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="blog_id" Type="int" />
+    <Property Name="datetime" Type="datetime" />
+    <Property Name="request" Type="nvarchar" MaxLength="50" />
+    <Property Name="comment_text" Type="nvarchar(max)" />
+    <Property Name="link" Type="nvarchar(max)" />
+    <Property Name="leave_text" Type="nvarchar" MaxLength="50" />
+    <Property Name="post_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Description">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="description_text" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="fsecslide">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="text" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="information">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="number" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="infoTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="inText" Type="nvarchar(max)" />
+    <Property Name="icon" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="sub_menu_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Most_given_questions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question" Type="nvarchar" MaxLength="100" />
+    <Property Name="answer" Type="nvarchar(max)" />
+    <Property Name="faqemTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="faqemPhoto" Type="nvarchar(max)" />
+    <Property Name="faqTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="faqText" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Order_s">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="Purchase_date" Type="datetime" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="total" Type="float" />
+    <Property Name="actions" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Paragraph">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="paragraph" Type="nvarchar" MaxLength="255" />
+    <Property Name="link" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Photos">
+    <Key>
+      <PropertyRef Name="photo_id" />
+    </Key>
+    <Property Name="photo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photos_path" Type="nvarchar(max)" />
+    <Property Name="photo_text" Type="nvarchar" MaxLength="50" />
+    <Property Name="link" Type="nvarchar" MaxLength="50" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product_tags">
+    <Key>
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="tag_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idName" Type="nvarchar" MaxLength="50" />
+    <Property Name="className" Type="nvarchar" MaxLength="50" />
+    <Property Name="tag_name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="em_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="em_photo" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="product_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="product_price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="category_id" Type="int" />
+    <Property Name="availability" Type="bit" />
+    <Property Name="tag_id" Type="int" />
+    <Property Name="photo_id" Type="int" />
+    <Property Name="product_number" Type="float" />
+    <Property Name="weight" Type="int" />
+    <Property Name="dimensions" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="status" Type="tinyint" />
+    <Property Name="box_id" Type="int" />
+    <Property Name="select_id" Type="int" />
+    <Property Name="select_clock_id" Type="int" />
+    <Property Name="selectTableware_id" Type="int" />
+    <Property Name="select_vase_id" Type="int" />
+    <Property Name="select_shop_id" Type="int" />
+    <Property Name="leftselectId" Type="int" />
+    <Property Name="product_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="clas" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="select">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="selectclock">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="selectShop">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="selectTableware">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Send_question">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="message_text" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+    <Property Name="h_menu_name" Type="nvarchar" MaxLength="20" />
+    <Property Name="sell_text" Type="nvarchar(max)" />
+    <Property Name="em_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactTypes" Type="nvarchar(max)" />
+    <Property Name="contact_links" Type="nvarchar(max)" />
+    <Property Name="location" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="varchar" MaxLength="50" />
+    <Property Name="mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="weblink" Type="nvarchar" MaxLength="50" />
+    <Property Name="gallery_col" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="Links" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Slider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="text" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="StartSelling">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="info_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="text" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Submenu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emtitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="emphoto" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="profession" Type="nvarchar" MaxLength="50" />
+    <Property Name="persinfo" Type="nvarchar(max)" />
+    <Property Name="link" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="255" />
+    <Property Name="photo" Type="nvarchar" MaxLength="255" />
+    <Property Name="idea" Type="nvarchar(max)" />
+    <Property Name="shopVintage" Type="nvarchar" MaxLength="50" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Box" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="vaseselect">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Billing_Cart">
+    <End Role="Cart" Type="Self.Cart" Multiplicity="0..1" />
+    <End Role="Billing" Type="Self.Billing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cart">
+        <PropertyRef Name="cart_id" />
+      </Principal>
+      <Dependent Role="Billing">
+        <PropertyRef Name="cart_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Billing_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="Billing" Type="Self.Billing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Billing">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_box_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="box" Type="Self.box" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="box">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comments_Blog">
+    <End Role="Blog" Type="Self.Blog" Multiplicity="0..1" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="blog_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comments_users">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_menu_Submenu">
+    <End Role="Submenu" Type="Self.Submenu" Multiplicity="0..1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submenu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="sub_menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_s_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="Order_s" Type="Self.Order_s" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Order_s">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_s_users">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="Order_s" Type="Self.Order_s" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Order_s">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_box">
+    <End Role="box" Type="Self.box" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="box">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="box_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Categories">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Photos">
+    <End Role="Photos" Type="Self.Photos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Photos">
+        <PropertyRef Name="photo_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="photo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Product_tags">
+    <End Role="Product_tags" Type="Self.Product_tags" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_tags">
+        <PropertyRef Name="tag_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="tag_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Products1" Type="Self.Products" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Products1">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_select">
+    <End Role="select" Type="Self.select" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="select">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="select_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_selectclock">
+    <End Role="selectclock" Type="Self.selectclock" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="selectclock">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="select_clock_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_selectShop">
+    <End Role="selectShop" Type="Self.selectShop" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="selectShop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="select_shop_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_selectTableware">
+    <End Role="selectTableware" Type="Self.selectTableware" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="selectTableware">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="selectTableware_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_vaseselect">
+    <End Role="vaseselect" Type="Self.vaseselect" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vaseselect">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="select_vase_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_select_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="select" Type="Self.select" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="select">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AnticDataModelStoreContainer">
+    <EntitySet Name="Aboutf" EntityType="Self.Aboutf" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Adminsp" EntityType="Self.Adminsp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Billing" EntityType="Self.Billing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BotText" EntityType="Self.BotText" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="box" EntityType="Self.box" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Description" EntityType="Self.Description" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fsecslide" EntityType="Self.fsecslide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="information" EntityType="Self.information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Most_given_questions" EntityType="Self.Most_given_questions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_s" EntityType="Self.Order_s" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paragraph" EntityType="Self.Paragraph" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_tags" EntityType="Self.Product_tags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="select" EntityType="Self.select" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="selectclock" EntityType="Self.selectclock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="selectShop" EntityType="Self.selectShop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="selectTableware" EntityType="Self.selectTableware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Send_question" EntityType="Self.Send_question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StartSelling" EntityType="Self.StartSelling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Submenu" EntityType="Self.Submenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vaseselect" EntityType="Self.vaseselect" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Billing_Cart" Association="Self.FK_Billing_Cart">
+      <End Role="Cart" EntitySet="Cart" />
+      <End Role="Billing" EntitySet="Billing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Billing_Products" Association="Self.FK_Billing_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Billing" EntitySet="Billing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_box_Products" Association="Self.FK_box_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="box" EntitySet="box" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comments_Blog" Association="Self.FK_comments_Blog">
+      <End Role="Blog" EntitySet="Blog" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comments_users" Association="Self.FK_comments_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_menu_Submenu" Association="Self.FK_menu_Submenu">
+      <End Role="Submenu" EntitySet="Submenu" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_s_Products" Association="Self.FK_Order_s_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Order_s" EntitySet="Order_s" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_s_users" Association="Self.FK_Order_s_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="Order_s" EntitySet="Order_s" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_box" Association="Self.FK_Products_box">
+      <End Role="box" EntitySet="box" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Photos" Association="Self.FK_Products_Photos">
+      <End Role="Photos" EntitySet="Photos" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Product_tags" Association="Self.FK_Products_Product_tags">
+      <End Role="Product_tags" EntitySet="Product_tags" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Products" Association="Self.FK_Products_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Products1" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_select" Association="Self.FK_Products_select">
+      <End Role="select" EntitySet="select" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_selectclock" Association="Self.FK_Products_selectclock">
+      <End Role="selectclock" EntitySet="selectclock" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_selectShop" Association="Self.FK_Products_selectShop">
+      <End Role="selectShop" EntitySet="selectShop" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_selectTableware" Association="Self.FK_Products_selectTableware">
+      <End Role="selectTableware" EntitySet="selectTableware" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_vaseselect" Association="Self.FK_Products_vaseselect">
+      <End Role="vaseselect" EntitySet="vaseselect" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_select_Products" Association="Self.FK_select_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="select" EntitySet="select" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
